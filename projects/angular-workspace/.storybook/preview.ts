@@ -1,6 +1,4 @@
 import type { Preview } from '@storybook/angular';
-import '../src/theme.css';
-import '../src/styles.scss';
 
 const preview: Preview = {
   parameters: {
