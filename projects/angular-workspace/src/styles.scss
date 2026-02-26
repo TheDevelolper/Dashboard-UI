@@ -1,10 +1,11 @@
 @use 'tailwindcss';
+@import './reset.css';
 @import './theme.css';
 
 body {
   font-family: var(--font-family);
   color: var(--color-text);
-  background-color: var(--color-background);
+  background-color: var(--color-bg);
 }
 
 .btn {

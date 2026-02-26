@@ -48,22 +48,22 @@
   /* ===========================================
      Colors - Primary
      =========================================== */
-  --color-primary: #f63049;
-  --color-primary-hover: #d02752;
-  --color-primary-foreground: #ffffff;
+  --color-primary: #fdb5ce;
+  --color-primary-hover: #f5a3c0;
+  --color-primary-foreground: #333333;
 
   /* ===========================================
      Colors - Secondary
      =========================================== */
-  --color-secondary: #8a244b;
-  --color-secondary-hover: #6b1a38;
+  --color-secondary: #333333;
+  --color-secondary-hover: #4a4a4a;
   --color-secondary-foreground: #ffffff;
 
   /* ===========================================
      Colors - Outline
      =========================================== */
-  --color-outline: #8a244b;
-  --color-outline-foreground: #8a244b;
+  --color-outline: #fdb5ce;
+  --color-outline-foreground: #333333;
 
   /* ===========================================
      Colors - Neutrals
@@ -73,29 +73,29 @@
   /* ===========================================
      Colors - Background
      =========================================== */
-  --color-bg: #f8fafc;
-  --color-bg-sidebar: #111f35;
-  --color-bg-sidebar-nav: #111f35;
+  --color-bg: #fdb5ce;
+  --color-bg-sidebar: #ffffff;
+  --color-bg-sidebar-nav: #ffffff;
   --color-bg-card: #ffffff;
 
   /* ===========================================
      Colors - Sidebar
      =========================================== */
-  --color-sidebar-text: rgba(255, 255, 255, 0.7);
-  --color-sidebar-text-hover: #ffffff;
-  --color-sidebar-hover: rgba(255, 255, 255, 0.1);
-  --color-sidebar-border: rgba(255, 255, 255, 0.1);
+  --color-sidebar-text: #333333;
+  --color-sidebar-text-hover: #555555;
+  --color-sidebar-hover: rgba(0, 0, 0, 0.05);
+  --color-sidebar-border: #e5e5e5;
 
   /* ===========================================
      Colors - Text
      =========================================== */
-  --color-text: #111f35;
-  --color-text-muted: #64748b;
+  --color-text: #333333;
+  --color-text-muted: #666666;
 
   /* ===========================================
      Colors - Border
      =========================================== */
-  --color-border: #e2e8f0;
+  --color-border: #e5e5e5;
 
   /* ===========================================
      Transitions
@@ -106,15 +106,15 @@
 
 /* Dark mode - controlled via data-theme attribute */
 [data-theme='dark'] {
-  --color-bg: #0f172a;
-  --color-bg-card: #1e293b;
-  --color-bg-sidebar: #0a0f1a;
-  --color-bg-sidebar-nav: #0a0f1a;
-  --color-text: #f1f5f9;
-  --color-text-muted: #94a3b8;
-  --color-border: #334155;
-  --color-sidebar-text: rgba(255, 255, 255, 0.7);
+  --color-bg: #333333;
+  --color-bg-card: #404040;
+  --color-bg-sidebar: #262626;
+  --color-bg-sidebar-nav: #262626;
+  --color-text: #fdb5ce;
+  --color-text-muted: #cccccc;
+  --color-border: #555555;
+  --color-sidebar-text: #fdb5ce;
   --color-sidebar-text-hover: #ffffff;
   --color-sidebar-hover: rgba(255, 255, 255, 0.1);
-  --color-sidebar-border: rgba(255, 255, 255, 0.1);
+  --color-sidebar-border: #444444;
 }
