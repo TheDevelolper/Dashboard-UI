@@ -1,8 +1,9 @@
 import { Component, input } from '@angular/core';
+import type { IconName } from '../atoms/icons/icon.component';
 
 export interface SidebarNavItem {
   label: string;
-  icon: string;
+  icon: IconName;
   route?: string;
 }
 

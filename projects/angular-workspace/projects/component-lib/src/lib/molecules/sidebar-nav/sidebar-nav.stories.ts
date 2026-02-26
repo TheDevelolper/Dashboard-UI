@@ -33,8 +33,8 @@ const meta: Meta<SidebarNavComponent> = {
 
 \`\`\`typescript
 const navItems = [
-  { label: 'Home', icon: '🏠', route: '/home' },
-  { label: 'Settings', icon: '⚙️', route: '/settings' }
+  { label: 'Home', icon: 'home', route: '/home' },
+  { label: 'Settings', icon: 'cog', route: '/settings' }
 ];
 \`\`\`
 `,
@@ -48,10 +48,10 @@ export default meta;
 type Story = StoryObj<SidebarNavComponent>;
 
 const navItems: readonly SidebarNavItem[] = [
-  { label: 'Home', icon: '🏠', route: '/home' },
-  { label: 'Analytics', icon: '📊', route: '/analytics' },
-  { label: 'Users', icon: '👥', route: '/users' },
-  { label: 'Settings', icon: '⚙️', route: '/settings' },
+  { label: 'Home', icon: 'home', route: '/home' },
+  { label: 'Analytics', icon: 'chart-bar', route: '/analytics' },
+  { label: 'Users', icon: 'users', route: '/users' },
+  { label: 'Settings', icon: 'cog', route: '/settings' },
 ];
 
 export const Default: Story = {
@@ -71,15 +71,15 @@ export const Collapsed: Story = {
 export const LongNavItems: Story = {
   args: {
     items: [
-      { label: 'Dashboard', icon: '🏠', route: '/dashboard' },
-      { label: 'Analytics', icon: '📈', route: '/analytics' },
-      { label: 'Customers', icon: '👥', route: '/customers' },
-      { label: 'Products', icon: '📦', route: '/products' },
-      { label: 'Orders', icon: '🛒', route: '/orders' },
-      { label: 'Messages', icon: '💬', route: '/messages' },
-      { label: 'Notifications', icon: '🔔', route: '/notifications' },
-      { label: 'Settings', icon: '⚙️', route: '/settings' },
-      { label: 'Help & Support', icon: '❓', route: '/help' },
+      { label: 'Dashboard', icon: 'home', route: '/dashboard' },
+      { label: 'Analytics', icon: 'chart-bar', route: '/analytics' },
+      { label: 'Customers', icon: 'users', route: '/customers' },
+      { label: 'Products', icon: 'folder', route: '/products' },
+      { label: 'Orders', icon: 'shopping-cart', route: '/orders' },
+      { label: 'Messages', icon: 'mail', route: '/messages' },
+      { label: 'Notifications', icon: 'bell', route: '/notifications' },
+      { label: 'Settings', icon: 'cog', route: '/settings' },
+      { label: 'Help & Support', icon: 'information-circle', route: '/help' },
     ],
     collapsed: false,
   },

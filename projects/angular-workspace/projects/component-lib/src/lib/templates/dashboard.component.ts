@@ -2,13 +2,14 @@ import { Component, input, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SidebarComponent } from '../organisms/sidebar.component';
 import { SidebarNavComponent } from '../molecules/sidebar-nav/sidebar-nav.component';
+import { ParticleIcon } from '../atoms/icons/icon.component';
 import type { SidebarNavItem } from '../organisms/sidebar.component';
 import { themeSignal, toggleTheme } from '../services/theme.service';
 
 @Component({
   selector: 'particle-dashboard',
   standalone: true,
-  imports: [CommonModule, SidebarComponent, SidebarNavComponent],
+  imports: [CommonModule, SidebarComponent, SidebarNavComponent, ParticleIcon],
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.css',
 })

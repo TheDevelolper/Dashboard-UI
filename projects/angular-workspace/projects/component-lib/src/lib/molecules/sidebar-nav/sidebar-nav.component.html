@@ -3,14 +3,14 @@
     @for (item of items(); track item.label) {
       @if (item.route) {
         <a class="nav-item" [routerLink]="item.route" routerLinkActive="active">
-          <span class="nav-icon">{{ item.icon }}</span>
+          <particle-icon [name]="item.icon" size="medium" />
           @if (!collapsed()) {
             <span class="nav-label">{{ item.label }}</span>
           }
         </a>
       } @else {
         <span class="nav-item nav-item-disabled">
-          <span class="nav-icon">{{ item.icon }}</span>
+          <particle-icon [name]="item.icon" size="medium" />
           @if (!collapsed()) {
             <span class="nav-label">{{ item.label }}</span>
           }

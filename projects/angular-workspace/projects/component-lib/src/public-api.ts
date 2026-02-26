@@ -7,6 +7,9 @@ export { ComponentLib } from './lib/component-lib';
 export { ParticleButton } from './lib/atoms/button/button.component';
 export type { ButtonVariant, ButtonSize, ButtonType } from './lib/atoms/button/button.component';
 
+export { ParticleIcon } from './lib/atoms/icons/icon.component';
+export type { IconName, IconSize } from './lib/atoms/icons/icon.component';
+
 export { CardComponent } from './lib/atoms/card/card.component';
 
 export { GridComponent } from './lib/molecules/grid/grid.component';
