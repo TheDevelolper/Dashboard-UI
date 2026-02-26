@@ -1,0 +1,23 @@
+<div class="dashboard">
+  <particle-sidebar [appTitle]="appTitle" [navItems]="navItems" />
+
+  <div class="main-content">
+    <header class="header">
+      <div class="header-left">
+        <button class="menu-toggle">☰</button>
+      </div>
+      <div class="header-right">
+        <div class="user-menu">
+          <span class="user-initials">{{ userInitials }}</span>
+          @if (userName) {
+            <span class="user-name">{{ userName }}</span>
+          }
+        </div>
+      </div>
+    </header>
+
+    <main class="content">
+      <ng-content></ng-content>
+    </main>
+  </div>
+</div>

@@ -1,0 +1,13 @@
+<aside class="sidebar">
+  <div class="sidebar-header">
+    <h1 class="app-title">{{ appTitle }}</h1>
+  </div>
+  <nav class="sidebar-nav">
+    @for (item of navItems; track item.label) {
+      <a class="nav-item" [href]="item.route ?? '#'">
+        <span class="nav-icon">{{ item.icon }}</span>
+        <span class="nav-label">{{ item.label }}</span>
+      </a>
+    }
+  </nav>
+</aside>

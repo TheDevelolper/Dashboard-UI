@@ -77,17 +77,15 @@ npx ng test --coverage
 
 ### Storybook
 ```bash
-# Start Storybook
+# Start Storybook (runs on port 6006 by default)
 pnpm storybook
 
 # Build Storybook static files
 pnpm build:storybook
-
-# Run from Angular workspace
-cd projects/angular-workspace
-npx ng run angular-workspace:storybook
-npx ng run angular-workspace:build-storybook
 ```
+
+**Notes:**
+- Run `npx storybook automigrate` if you encounter migration errors
 
 ## Theme System
 
