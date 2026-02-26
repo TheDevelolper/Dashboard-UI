@@ -4,6 +4,7 @@ import { ParticleButton } from './lib-button.component';
 const meta: Meta<ParticleButton> = {
   title: 'Atoms/Button',
   component: ParticleButton,
+  tags: ['autodocs'],
   argTypes: {
     variant: {
       control: 'select',
@@ -15,6 +16,32 @@ const meta: Meta<ParticleButton> = {
     },
     disabled: {
       control: 'boolean',
+    },
+  },
+  parameters: {
+    docs: {
+      description: {
+        component: `
+## Usage
+
+\`\`\`html
+<particle-button 
+  [variant]="'primary'" 
+  [size]="'medium'"
+  [disabled]="false">
+  Click me
+</particle-button>
+\`\`\`
+
+### Props
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| variant | 'primary' \\| 'secondary' \\| 'outline' | 'primary' | Button style variant |
+| size | 'small' \\| 'medium' \\| 'large' | 'medium' | Button size |
+| disabled | boolean | false | Whether the button is disabled |
+`,
+      },
     },
   },
 };

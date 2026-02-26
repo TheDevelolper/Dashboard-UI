@@ -11,6 +11,38 @@ const meta: Meta<DashboardComponent> = {
     userName: { control: 'text' },
     userInitials: { control: 'text' },
   },
+  parameters: {
+    docs: {
+      description: {
+        component: `
+## Usage
+
+\`\`\`html
+<particle-dashboard 
+  [appTitle]="'My Dashboard'" 
+  [navItems]="navItems"
+  [userName]="'John Doe'"
+  [userInitials]="'JD'">
+  
+  <!-- Your page content here -->
+  <h1>Welcome</h1>
+  
+</particle-dashboard>
+\`\`\`
+
+### With Navigation Items
+
+\`\`\`typescript
+const navItems = [
+  { label: 'Home', icon: '🏠', route: '/home' },
+  { label: 'Analytics', icon: '📊', route: '/analytics' },
+  { label: 'Settings', icon: '⚙️', route: '/settings' }
+];
+\`\`\`
+`,
+      },
+    },
+  },
 };
 
 export default meta;

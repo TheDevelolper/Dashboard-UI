@@ -9,6 +9,31 @@ const meta: Meta<SidebarComponent> = {
   argTypes: {
     appTitle: { control: 'text' },
   },
+  parameters: {
+    docs: {
+      description: {
+        component: `
+## Usage
+
+\`\`\`html
+<particle-sidebar 
+  [appTitle]="'My App'" 
+  [navItems]="navItems">
+</particle-sidebar>
+\`\`\`
+
+### With Navigation Items
+
+\`\`\`typescript
+const navItems = [
+  { label: 'Home', icon: '🏠', route: '/home' },
+  { label: 'Settings', icon: '⚙️', route: '/settings' }
+];
+\`\`\`
+`,
+      },
+    },
+  },
 };
 
 export default meta;
