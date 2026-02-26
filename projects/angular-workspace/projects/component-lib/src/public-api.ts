@@ -9,6 +9,9 @@ export type { ButtonVariant, ButtonSize, ButtonType } from './lib/atoms/lib-butt
 
 export { CardComponent } from './lib/atoms/card.component';
 
+export { GridComponent } from './lib/atoms/grid.component';
+export type { GridGap, GridCols } from './lib/atoms/grid.component';
+
 export { DashboardComponent } from './lib/templates/dashboard.component';
 
 export { SidebarComponent } from './lib/organisms/sidebar.component';

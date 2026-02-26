@@ -1,0 +1,22 @@
+@use 'tailwindcss';
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+.gap-xs {
+  gap: var(--grid-gap-xs);
+}
+.gap-sm {
+  gap: var(--grid-gap-sm);
+}
+.gap-md {
+  gap: var(--grid-gap-md);
+}
+.gap-lg {
+  gap: var(--grid-gap-lg);
+}
+.gap-xl {
+  gap: var(--grid-gap-xl);
+}
