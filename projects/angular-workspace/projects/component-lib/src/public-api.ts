@@ -7,6 +7,8 @@ export { ComponentLib } from './lib/component-lib';
 export { ParticleButton } from './lib/atoms/lib-button.component';
 export type { ButtonVariant, ButtonSize, ButtonType } from './lib/atoms/lib-button.component';
 
+export { CardComponent } from './lib/atoms/card.component';
+
 export { DashboardComponent } from './lib/templates/dashboard.component';
 
 export { SidebarComponent } from './lib/organisms/sidebar.component';
