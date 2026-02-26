@@ -13,3 +13,5 @@ export { SidebarComponent } from './lib/organisms/sidebar.component';
 export type { SidebarNavItem } from './lib/organisms/sidebar.component';
 
 export { SidebarNavComponent } from './lib/molecules/sidebar-nav/sidebar-nav.component';
+
+export { initializeTheme, themeSignal, toggleTheme, setTheme } from './lib/services/theme.service';

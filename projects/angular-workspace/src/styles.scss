@@ -1,8 +1,10 @@
-@use "tailwindcss";
-@import "./theme.css";
+@use 'tailwindcss';
+@import './theme.css';
 
 body {
   font-family: var(--font-family);
+  color: var(--color-text);
+  background-color: var(--color-background);
 }
 
 .btn {
@@ -46,7 +48,7 @@ body {
 
 .btn-primary {
   background-color: var(--color-primary);
-  color: var(--color-white);
+  color: var(--color-primary-foreground);
 }
 
 .btn-primary:hover:not(:disabled) {
@@ -55,7 +57,7 @@ body {
 
 .btn-secondary {
   background-color: var(--color-secondary);
-  color: var(--color-white);
+  color: var(--color-secondary-foreground);
 }
 
 .btn-secondary:hover:not(:disabled) {
@@ -64,11 +66,11 @@ body {
 
 .btn-outline {
   background-color: transparent;
-  border: 1px solid var(--color-primary);
-  color: var(--color-primary);
+  border: 1px solid var(--color-outline);
+  color: var(--color-outline-foreground);
 }
 
 .btn-outline:hover:not(:disabled) {
-  background-color: var(--color-primary);
-  color: var(--color-white);
+  background-color: var(--color-outline);
+  color: var(--color-primary-foreground);
 }

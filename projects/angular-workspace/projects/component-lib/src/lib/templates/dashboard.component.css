@@ -1,4 +1,4 @@
-@use "tailwindcss";
+@use 'tailwindcss';
 
 .dashboard {
   display: flex;
@@ -15,7 +15,7 @@
 
 .header {
   height: var(--header-height);
-  background-color: var(--color-white);
+  background-color: var(--color-bg-card);
   border-bottom: 1px solid var(--color-border);
   display: flex;
   align-items: center;
@@ -31,6 +31,21 @@
   font-size: 1.5rem;
   cursor: pointer;
   color: var(--color-text);
+}
+
+.theme-toggle {
+  background: none;
+  border: none;
+  font-size: 1.25rem;
+  cursor: pointer;
+  padding: var(--spacing-sm);
+  border-radius: var(--radius-md);
+  transition: background-color var(--transition-fast);
+  margin-right: var(--spacing-md);
+}
+
+.theme-toggle:hover {
+  background-color: var(--color-sidebar-hover);
 }
 
 .header-right {
@@ -49,7 +64,7 @@
   height: 2.25rem;
   border-radius: 50%;
   background-color: var(--color-primary);
-  color: var(--color-white);
+  color: var(--color-primary-foreground);
   display: flex;
   align-items: center;
   justify-content: center;

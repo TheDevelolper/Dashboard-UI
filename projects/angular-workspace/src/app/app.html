@@ -1,17 +1,19 @@
-<h1>Welcome to {{ title() }}!</h1>
+<particle-dashboard appTitle="My App" [navItems]="navItems" userName="John Doe" userInitials="JD">
+  <h1>Welcome to {{ title() }}!</h1>
 
-<div class="flex gap-4 p-4">
-  <particle-button variant="primary" size="medium">Primary</particle-button>
-  <particle-button variant="secondary" size="medium">Secondary</particle-button>
-  <particle-button variant="outline" size="medium">Outline</particle-button>
-</div>
+  <div class="flex gap-4 p-4">
+    <particle-button variant="primary" size="medium">Primary</particle-button>
+    <particle-button variant="secondary" size="medium">Secondary</particle-button>
+    <particle-button variant="outline" size="medium">Outline</particle-button>
+  </div>
 
-<div class="flex gap-4 p-4">
-  <particle-button variant="primary" size="small">Small</particle-button>
-  <particle-button variant="primary" size="medium">Medium</particle-button>
-  <particle-button variant="primary" size="large">Large</particle-button>
-</div>
+  <div class="flex gap-4 p-4">
+    <particle-button variant="primary" size="small">Small</particle-button>
+    <particle-button variant="primary" size="medium">Medium</particle-button>
+    <particle-button variant="primary" size="large">Large</particle-button>
+  </div>
 
-<div class="p-4">
-  <particle-button variant="primary" [disabled]="true">Disabled</particle-button>
-</div>
+  <div class="p-4">
+    <particle-button variant="primary" [disabled]="true">Disabled</particle-button>
+  </div>
+</particle-dashboard>

@@ -9,6 +9,17 @@
         <button class="menu-toggle">☰</button>
       </div>
       <div class="header-right">
+        <button
+          class="theme-toggle"
+          (click)="toggleTheme()"
+          [attr.aria-label]="isDark() ? 'Switch to light mode' : 'Switch to dark mode'"
+        >
+          @if (isDark()) {
+            ☀️
+          } @else {
+            🌙
+          }
+        </button>
         <div class="user-menu">
           <span class="user-initials">{{ userInitials }}</span>
           @if (userName) {
