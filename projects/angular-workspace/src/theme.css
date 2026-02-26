@@ -68,7 +68,6 @@
   /* ===========================================
      Colors - Neutrals
      =========================================== */
-  --color-white: #ffffff;
 
   /* ===========================================
      Colors - Background
@@ -106,8 +105,18 @@
 
 /* Dark mode - controlled via data-theme attribute */
 [data-theme='dark'] {
+  /* Primary, Secondary, Outline - same as light mode */
+  --color-primary: #fdb5ce;
+  --color-primary-hover: #f5a3c0;
+  --color-primary-foreground: #333333;
+  --color-secondary: #333333;
+  --color-secondary-hover: #4a4a4a;
+  --color-secondary-foreground: #ffffff;
+  --color-outline: #fdb5ce;
+  --color-outline-foreground: #333333;
+
   --color-bg: #1a1a1a;
-  --color-bg-card: #141414;
+  --color-bg-card: #252525;
   --color-bg-sidebar: #141414;
   --color-bg-sidebar-nav: #141414;
   --color-text: #fdb5ce;
