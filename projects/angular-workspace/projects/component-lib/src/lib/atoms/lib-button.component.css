@@ -1,0 +1,54 @@
+@use "tailwindcss";
+
+.btn {
+  @apply border-none font-medium transition-all duration-200 cursor-pointer;
+  border-radius: var(--radius-sm);
+}
+
+.btn:disabled {
+  @apply opacity-50 cursor-not-allowed;
+}
+
+.btn-small {
+  padding: var(--padding-button-sm-y) var(--padding-button-sm-x);
+  font-size: var(--font-size-xs);
+}
+
+.btn-medium {
+  padding: var(--padding-button-md-y) var(--padding-button-md-x);
+  font-size: var(--font-size-sm);
+}
+
+.btn-large {
+  padding: var(--padding-button-lg-y) var(--padding-button-lg-x);
+  font-size: var(--font-size-base);
+}
+
+.btn-primary {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+.btn-primary:hover:not(:disabled) {
+  background-color: var(--color-primary-hover);
+}
+
+.btn-secondary {
+  background-color: var(--color-secondary);
+  color: var(--color-white);
+}
+
+.btn-secondary:hover:not(:disabled) {
+  background-color: var(--color-secondary-hover);
+}
+
+.btn-outline {
+  background-color: transparent;
+  border: 1px solid var(--color-primary);
+  color: var(--color-primary);
+}
+
+.btn-outline:hover:not(:disabled) {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}

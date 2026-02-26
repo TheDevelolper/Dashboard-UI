@@ -1,0 +1,13 @@
+{
+  "name": "my-org",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "pnpm --filter angular-workspace start",
+    "build": "pnpm --filter angular-workspace build",
+    "build:app": "pnpm --filter angular-workspace build",
+    "build:lib": "pnpm --filter angular-workspace build component-lib",
+    "storybook": "pnpm --filter angular-workspace storybook",
+    "build:storybook": "pnpm --filter angular-workspace build-storybook"
+  }
+}

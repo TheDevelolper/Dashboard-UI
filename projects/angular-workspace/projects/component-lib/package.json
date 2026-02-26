@@ -1,0 +1,15 @@
+{
+  "name": "component-lib",
+  "version": "0.0.1",
+  "scripts": {
+    "build": "ng build component-lib"
+  },
+  "peerDependencies": {
+    "@angular/common": "^21.2.0",
+    "@angular/core": "^21.2.0"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
+  },
+  "sideEffects": false
+}
