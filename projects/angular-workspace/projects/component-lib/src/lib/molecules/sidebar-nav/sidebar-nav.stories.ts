@@ -1,15 +1,23 @@
 import type { Meta, StoryObj } from '@storybook/angular';
 import { SidebarNavComponent } from './sidebar-nav.component';
 import type { SidebarNavItem } from '../../organisms/sidebar.component';
+import { RouterTestingModule } from '@angular/router/testing';
+import { moduleMetadata } from '@storybook/angular';
 
 const meta: Meta<SidebarNavComponent> = {
   title: 'Molecules/SidebarNav',
   component: SidebarNavComponent,
   tags: ['autodocs'],
+  decorators: [
+    moduleMetadata({
+      imports: [RouterTestingModule],
+    }),
+  ],
   argTypes: {
     collapsed: { control: 'boolean' },
   },
   parameters: {
+    layout: 'fullscreen',
     docs: {
       description: {
         component: `
@@ -40,10 +48,10 @@ export default meta;
 type Story = StoryObj<SidebarNavComponent>;
 
 const navItems: readonly SidebarNavItem[] = [
-  { label: 'Home', icon: '🏠', route: '#' },
-  { label: 'Analytics', icon: '📊', route: '#' },
-  { label: 'Users', icon: '👥', route: '#' },
-  { label: 'Settings', icon: '⚙️', route: '#' },
+  { label: 'Home', icon: '🏠', route: '/home' },
+  { label: 'Analytics', icon: '📊', route: '/analytics' },
+  { label: 'Users', icon: '👥', route: '/users' },
+  { label: 'Settings', icon: '⚙️', route: '/settings' },
 ];
 
 export const Default: Story = {
@@ -63,15 +71,15 @@ export const Collapsed: Story = {
 export const LongNavItems: Story = {
   args: {
     items: [
-      { label: 'Dashboard', icon: '🏠', route: '#' },
-      { label: 'Analytics', icon: '📈', route: '#' },
-      { label: 'Customers', icon: '👥', route: '#' },
-      { label: 'Products', icon: '📦', route: '#' },
-      { label: 'Orders', icon: '🛒', route: '#' },
-      { label: 'Messages', icon: '💬', route: '#' },
-      { label: 'Notifications', icon: '🔔', route: '#' },
-      { label: 'Settings', icon: '⚙️', route: '#' },
-      { label: 'Help & Support', icon: '❓', route: '#' },
+      { label: 'Dashboard', icon: '🏠', route: '/dashboard' },
+      { label: 'Analytics', icon: '📈', route: '/analytics' },
+      { label: 'Customers', icon: '👥', route: '/customers' },
+      { label: 'Products', icon: '📦', route: '/products' },
+      { label: 'Orders', icon: '🛒', route: '/orders' },
+      { label: 'Messages', icon: '💬', route: '/messages' },
+      { label: 'Notifications', icon: '🔔', route: '/notifications' },
+      { label: 'Settings', icon: '⚙️', route: '/settings' },
+      { label: 'Help & Support', icon: '❓', route: '/help' },
     ],
     collapsed: false,
   },
