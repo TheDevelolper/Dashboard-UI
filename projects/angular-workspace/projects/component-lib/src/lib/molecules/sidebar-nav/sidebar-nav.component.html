@@ -1,0 +1,12 @@
+<div class="sidebar-nav-wrapper">
+  <nav class="sidebar-nav" [class.collapsed]="collapsed()">
+    @for (item of items(); track item.label) {
+      <a class="nav-item" [href]="item.route ?? '#'">
+        <span class="nav-icon">{{ item.icon }}</span>
+        @if (!collapsed()) {
+          <span class="nav-label">{{ item.label }}</span>
+        }
+      </a>
+    }
+  </nav>
+</div>

@@ -2,7 +2,8 @@
 
 :root {
   /* Typography */
-  --font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-family:
+    'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   --spacing-xs: 0.25rem;
   --spacing-sm: 0.5rem;
   --spacing-md: 1rem;
@@ -40,6 +41,7 @@
   --color-white: #ffffff;
   --color-bg: #f8fafc;
   --color-bg-sidebar: #1e293b;
+  --color-bg-sidebar-nav: #1e293b;
   --color-bg-card: #ffffff;
   --color-text: #1e293b;
   --color-text-muted: #64748b;

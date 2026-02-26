@@ -1,0 +1,48 @@
+@use 'tailwindcss';
+
+.sidebar-nav-wrapper {
+  background-color: var(--color-bg-sidebar-nav);
+  height: 100%;
+}
+
+.sidebar-nav {
+  padding: var(--spacing-md) 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+}
+
+.sidebar-nav.collapsed {
+  align-items: center;
+  padding: var(--spacing-md) var(--spacing-sm);
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-sm) var(--spacing-lg);
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  transition: all var(--transition-fast);
+}
+
+.collapsed .nav-item {
+  padding: var(--spacing-sm);
+  justify-content: center;
+}
+
+.nav-item:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--color-white);
+}
+
+.nav-icon {
+  font-size: 1.25rem;
+  flex-shrink: 0;
+}
+
+.nav-label {
+  font-size: var(--font-size-sm);
+  white-space: nowrap;
+}

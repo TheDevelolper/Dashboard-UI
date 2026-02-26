@@ -1,5 +1,7 @@
 <div class="dashboard">
-  <particle-sidebar [appTitle]="appTitle" [navItems]="navItems" />
+  <particle-sidebar [appTitle]="appTitle">
+    <particle-sidebar-nav [items]="navItems" />
+  </particle-sidebar>
 
   <div class="main-content">
     <header class="header">

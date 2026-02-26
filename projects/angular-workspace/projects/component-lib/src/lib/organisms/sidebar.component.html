@@ -1,13 +1,14 @@
 <aside class="sidebar">
   <div class="sidebar-header">
-    <h1 class="app-title">{{ appTitle }}</h1>
-  </div>
-  <nav class="sidebar-nav">
-    @for (item of navItems; track item.label) {
-      <a class="nav-item" [href]="item.route ?? '#'">
-        <span class="nav-icon">{{ item.icon }}</span>
-        <span class="nav-label">{{ item.label }}</span>
-      </a>
+    @if (appTitle) {
+      <h1 class="app-title">{{ appTitle }}</h1>
     }
-  </nav>
+    <ng-content select="[sidebarHeader]"></ng-content>
+  </div>
+  <div class="sidebar-content">
+    <ng-content></ng-content>
+  </div>
+  <div class="sidebar-footer">
+    <ng-content select="[sidebarFooter]"></ng-content>
+  </div>
 </aside>
