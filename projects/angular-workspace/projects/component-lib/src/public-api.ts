@@ -4,13 +4,13 @@
 
 export { ComponentLib } from './lib/component-lib';
 
-export { ParticleButton } from './lib/atoms/lib-button.component';
-export type { ButtonVariant, ButtonSize, ButtonType } from './lib/atoms/lib-button.component';
+export { ParticleButton } from './lib/atoms/button/button.component';
+export type { ButtonVariant, ButtonSize, ButtonType } from './lib/atoms/button/button.component';
 
-export { CardComponent } from './lib/atoms/card.component';
+export { CardComponent } from './lib/atoms/card/card.component';
 
-export { GridComponent } from './lib/atoms/grid.component';
-export type { GridGap, GridCols } from './lib/atoms/grid.component';
+export { GridComponent } from './lib/molecules/grid/grid.component';
+export type { GridGap, GridCols } from './lib/molecules/grid/grid.component';
 
 export { DashboardComponent } from './lib/templates/dashboard.component';
 

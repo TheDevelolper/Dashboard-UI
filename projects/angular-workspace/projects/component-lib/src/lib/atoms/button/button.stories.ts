@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/angular';
-import { ParticleButton } from './lib-button.component';
+import { ParticleButton } from './button.component';
 
 const meta: Meta<ParticleButton> = {
   title: 'Atoms/Button',

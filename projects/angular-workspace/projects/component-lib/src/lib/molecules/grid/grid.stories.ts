@@ -1,10 +1,10 @@
 import type { Meta, StoryObj } from '@storybook/angular';
 import { GridComponent } from './grid.component';
-import { CardComponent } from './card.component';
+import { CardComponent } from '../../atoms/card/card.component';
 import { moduleMetadata } from '@storybook/angular';
 
 const meta: Meta<GridComponent> = {
-  title: 'Atoms/Grid',
+  title: 'Molecules/Grid',
   component: GridComponent,
   tags: ['autodocs'],
   decorators: [

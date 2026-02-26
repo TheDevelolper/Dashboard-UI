@@ -28,8 +28,27 @@ body {
 }
 
 .btn:disabled {
-  opacity: 0.5;
   cursor: not-allowed;
+}
+
+.btn-primary:disabled {
+  background-color: var(--color-primary);
+  opacity: 0.5;
+}
+
+.btn-primary:disabled,
+.btn-secondary:disabled,
+.btn-outline:disabled {
+  color: color-mix(in srgb, currentColor 60%, transparent);
+}
+
+.btn-secondary:disabled {
+  background-color: var(--color-secondary);
+  opacity: 0.5;
+}
+
+.btn-outline:disabled {
+  opacity: 0.5;
 }
 
 .btn-small {
@@ -49,7 +68,7 @@ body {
 
 .btn-primary {
   background-color: var(--color-primary);
-  color: var(--color-primary-foreground);
+  color: var(--color-btn-text);
 }
 
 .btn-primary:hover:not(:disabled) {
@@ -58,7 +77,7 @@ body {
 
 .btn-secondary {
   background-color: var(--color-secondary);
-  color: var(--color-secondary-foreground);
+  color: var(--color-btn-secondary-text);
 }
 
 .btn-secondary:hover:not(:disabled) {
@@ -73,5 +92,5 @@ body {
 
 .btn-outline:hover:not(:disabled) {
   background-color: var(--color-outline);
-  color: var(--color-primary-foreground);
+  color: var(--color-btn-text);
 }

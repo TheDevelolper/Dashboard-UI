@@ -60,6 +60,7 @@
   --color-primary: #fdb5ce;
   --color-primary-hover: #f5a3c0;
   --color-primary-foreground: #333333;
+  --color-btn-text: #333333;
 
   /* ===========================================
      Colors - Secondary
@@ -67,6 +68,7 @@
   --color-secondary: #333333;
   --color-secondary-hover: #4a4a4a;
   --color-secondary-foreground: #ffffff;
+  --color-btn-secondary-text: #ffffff;
 
   /* ===========================================
      Colors - Outline
@@ -114,13 +116,15 @@
 
 /* Dark mode - controlled via data-theme attribute */
 [data-theme='dark'] {
-  /* Primary, Secondary, Outline - same as light mode */
+  /* Primary, Secondary, Outline */
   --color-primary: #fdb5ce;
   --color-primary-hover: #f5a3c0;
   --color-primary-foreground: #333333;
+  --color-btn-text: #333333;
   --color-secondary: #333333;
   --color-secondary-hover: #4a4a4a;
   --color-secondary-foreground: #ffffff;
+  --color-btn-secondary-text: #ffffff;
   --color-outline: #fdb5ce;
   --color-outline-foreground: #333333;
 

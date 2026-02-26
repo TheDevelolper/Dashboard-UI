@@ -8,7 +8,8 @@ export type ButtonType = 'button' | 'submit' | 'reset';
 @Component({
   selector: 'particle-button',
   imports: [CommonModule],
-  templateUrl: './lib-button.component.html',
+  templateUrl: './button.component.html',
+  styleUrl: './button.component.css',
 })
 export class ParticleButton {
   readonly variant = input<ButtonVariant>('primary');
