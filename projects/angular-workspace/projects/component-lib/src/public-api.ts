@@ -2,7 +2,14 @@
  * Public API Surface of component-lib
  */
 
-export * from './lib/component-lib';
-export * from './lib/atoms/lib-button.component';
-export * from './lib/templates/dashboard.component';
-export * from './lib/organisms/sidebar.component';
+export { ComponentLib } from './lib/component-lib';
+
+export { ParticleButton } from './lib/atoms/lib-button.component';
+export type { ButtonVariant, ButtonSize, ButtonType } from './lib/atoms/lib-button.component';
+
+export { DashboardComponent } from './lib/templates/dashboard.component';
+
+export { SidebarComponent } from './lib/organisms/sidebar.component';
+export type { SidebarNavItem } from './lib/organisms/sidebar.component';
+
+export { SidebarNavComponent } from './lib/molecules/sidebar-nav/sidebar-nav.component';
