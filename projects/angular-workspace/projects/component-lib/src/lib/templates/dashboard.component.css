@@ -11,6 +11,11 @@
   margin-left: var(--sidebar-width);
   display: flex;
   flex-direction: column;
+  transition: margin-left var(--transition-normal);
+}
+
+.dashboard.collapsed .main-content {
+  margin-left: 4rem;
 }
 
 .header {

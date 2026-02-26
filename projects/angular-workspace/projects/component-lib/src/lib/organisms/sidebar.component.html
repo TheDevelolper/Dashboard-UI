@@ -1,7 +1,7 @@
-<aside class="sidebar">
+<aside class="sidebar" [class.collapsed]="collapsed()">
   <div class="sidebar-header">
-    @if (appTitle) {
-      <h1 class="app-title">{{ appTitle }}</h1>
+    @if (appTitle() && !collapsed()) {
+      <h1 class="app-title">{{ appTitle() }}</h1>
     }
     <ng-content select="[sidebarHeader]"></ng-content>
   </div>

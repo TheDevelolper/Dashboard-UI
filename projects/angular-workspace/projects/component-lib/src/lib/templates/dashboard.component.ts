@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, input, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SidebarComponent } from '../organisms/sidebar.component';
 import { SidebarNavComponent } from '../molecules/sidebar-nav/sidebar-nav.component';
@@ -13,11 +13,17 @@ import { themeSignal, toggleTheme } from '../services/theme.service';
   styleUrl: './dashboard.component.css',
 })
 export class DashboardComponent {
-  @Input() appTitle = 'Dashboard';
-  @Input() navItems: readonly SidebarNavItem[] = [];
-  @Input() userName = '';
-  @Input() userInitials = '';
+  readonly appTitle = input<string>('Dashboard');
+  readonly navItems = input<readonly SidebarNavItem[]>([]);
+  readonly userName = input<string>('');
+  readonly userInitials = input<string>('');
 
+  protected readonly sidebarCollapsed = signal(false);
   protected readonly isDark = themeSignal;
+
+  protected readonly toggleSidebar = () => {
+    this.sidebarCollapsed.update((v) => !v);
+  };
+
   protected readonly toggleTheme = () => toggleTheme();
 }

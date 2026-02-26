@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, input } from '@angular/core';
 
 export interface SidebarNavItem {
   label: string;
@@ -13,5 +13,6 @@ export interface SidebarNavItem {
   styleUrl: './sidebar.component.css',
 })
 export class SidebarComponent {
-  @Input() appTitle = '';
+  readonly appTitle = input<string>('');
+  readonly collapsed = input<boolean>(false);
 }
