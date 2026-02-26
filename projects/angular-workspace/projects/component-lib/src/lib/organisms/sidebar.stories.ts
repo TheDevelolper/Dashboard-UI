@@ -3,6 +3,7 @@ import { SidebarComponent } from './sidebar.component';
 import { SidebarNavComponent } from '../molecules/sidebar-nav/sidebar-nav.component';
 import type { SidebarNavItem } from './sidebar.component';
 import { moduleMetadata } from '@storybook/angular';
+import { RouterTestingModule } from '@angular/router/testing';
 
 const meta: Meta<SidebarComponent> = {
   title: 'Organisms/Sidebar',
@@ -10,13 +11,14 @@ const meta: Meta<SidebarComponent> = {
   tags: ['autodocs'],
   decorators: [
     moduleMetadata({
-      imports: [SidebarNavComponent],
+      imports: [SidebarNavComponent, RouterTestingModule],
     }),
   ],
   argTypes: {
     appTitle: { control: 'text' },
   },
   parameters: {
+    layout: 'fullscreen',
     docs: {
       description: {
         component: `
@@ -47,16 +49,13 @@ export default meta;
 type Story = StoryObj<SidebarComponent>;
 
 const navItems: readonly SidebarNavItem[] = [
-  { label: 'Home', icon: '🏠', route: '#' },
-  { label: 'Analytics', icon: '📊', route: '#' },
-  { label: 'Users', icon: '👥', route: '#' },
-  { label: 'Settings', icon: '⚙️', route: '#' },
+  { label: 'Home', icon: '🏠', route: '/home' },
+  { label: 'Analytics', icon: '📊', route: '/analytics' },
+  { label: 'Users', icon: '👥', route: '/users' },
+  { label: 'Settings', icon: '⚙️', route: '/settings' },
 ];
 
 export const Default: Story = {
-  args: {
-    appTitle: 'My Dashboard',
-  },
   render: () => ({
     template: `
       <particle-sidebar [appTitle]="'My Dashboard'">
@@ -70,13 +69,10 @@ export const Default: Story = {
 };
 
 export const Empty: Story = {
-  args: {
-    appTitle: 'Dashboard',
-  },
   render: () => ({
     template: `
       <particle-sidebar [appTitle]="'Dashboard'">
-        <p style="padding: 1rem; color: rgba(255,255,255,0.5);">No navigation items</p>
+        <p style="padding: 1rem; color: var(--color-sidebar-text); opacity: 0.7;">No navigation items</p>
       </particle-sidebar>
     `,
   }),
@@ -96,13 +92,13 @@ export const LongNavItems: Story = {
 };
 
 const longNavItems: readonly SidebarNavItem[] = [
-  { label: 'Dashboard', icon: '🏠', route: '#' },
-  { label: 'Analytics', icon: '📈', route: '#' },
-  { label: 'Customers', icon: '👥', route: '#' },
-  { label: 'Products', icon: '📦', route: '#' },
-  { label: 'Orders', icon: '🛒', route: '#' },
-  { label: 'Messages', icon: '💬', route: '#' },
-  { label: 'Notifications', icon: '🔔', route: '#' },
-  { label: 'Settings', icon: '⚙️', route: '#' },
-  { label: 'Help & Support', icon: '❓', route: '#' },
+  { label: 'Dashboard', icon: '🏠', route: '/dashboard' },
+  { label: 'Analytics', icon: '📈', route: '/analytics' },
+  { label: 'Customers', icon: '👥', route: '/customers' },
+  { label: 'Products', icon: '📦', route: '/products' },
+  { label: 'Orders', icon: '🛒', route: '/orders' },
+  { label: 'Messages', icon: '💬', route: '/messages' },
+  { label: 'Notifications', icon: '🔔', route: '/notifications' },
+  { label: 'Settings', icon: '⚙️', route: '/settings' },
+  { label: 'Help & Support', icon: '❓', route: '/help' },
 ];

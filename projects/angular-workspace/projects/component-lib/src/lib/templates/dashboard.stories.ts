@@ -1,17 +1,25 @@
 import type { Meta, StoryObj } from '@storybook/angular';
 import { DashboardComponent } from './dashboard.component';
 import type { SidebarNavItem } from '../organisms/sidebar.component';
+import { moduleMetadata } from '@storybook/angular';
+import { RouterTestingModule } from '@angular/router/testing';
 
 const meta: Meta<DashboardComponent> = {
   title: 'Templates/Dashboard',
   component: DashboardComponent,
   tags: ['autodocs'],
+  decorators: [
+    moduleMetadata({
+      imports: [RouterTestingModule],
+    }),
+  ],
   argTypes: {
     appTitle: { control: 'text' },
     userName: { control: 'text' },
     userInitials: { control: 'text' },
   },
   parameters: {
+    layout: 'fullscreen',
     docs: {
       description: {
         component: `
@@ -50,10 +58,10 @@ export default meta;
 type Story = StoryObj<DashboardComponent>;
 
 const navItems: readonly SidebarNavItem[] = [
-  { label: 'Home', icon: '🏠', route: '#' },
-  { label: 'Analytics', icon: '📊', route: '#' },
-  { label: 'Users', icon: '👥', route: '#' },
-  { label: 'Settings', icon: '⚙️', route: '#' },
+  { label: 'Home', icon: '🏠', route: '/home' },
+  { label: 'Analytics', icon: '📊', route: '/analytics' },
+  { label: 'Users', icon: '👥', route: '/users' },
+  { label: 'Settings', icon: '⚙️', route: '/settings' },
 ];
 
 export const Default: Story = {
@@ -78,15 +86,15 @@ export const LongNavItems: Story = {
   args: {
     appTitle: 'Admin Panel',
     navItems: [
-      { label: 'Dashboard', icon: '🏠', route: '#' },
-      { label: 'Analytics', icon: '📈', route: '#' },
-      { label: 'Customers', icon: '👥', route: '#' },
-      { label: 'Products', icon: '📦', route: '#' },
-      { label: 'Orders', icon: '🛒', route: '#' },
-      { label: 'Messages', icon: '💬', route: '#' },
-      { label: 'Notifications', icon: '🔔', route: '#' },
-      { label: 'Settings', icon: '⚙️', route: '#' },
-      { label: 'Help & Support', icon: '❓', route: '#' },
+      { label: 'Dashboard', icon: '🏠', route: '/dashboard' },
+      { label: 'Analytics', icon: '📈', route: '/analytics' },
+      { label: 'Customers', icon: '👥', route: '/customers' },
+      { label: 'Products', icon: '📦', route: '/products' },
+      { label: 'Orders', icon: '🛒', route: '/orders' },
+      { label: 'Messages', icon: '💬', route: '/messages' },
+      { label: 'Notifications', icon: '🔔', route: '/notifications' },
+      { label: 'Settings', icon: '⚙️', route: '/settings' },
+      { label: 'Help & Support', icon: '❓', route: '/help' },
     ],
     userName: 'Admin User',
     userInitials: 'AU',
