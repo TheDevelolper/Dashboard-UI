@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { CardComponent, GridComponent } from "@kiranshub/dashboard-ui";
+import { CardComponent, GridComponent } from '@kiranshub/dashboard-ui';
 
 @Component({
   selector: 'app-home',
@@ -12,7 +12,7 @@ import { CardComponent, GridComponent } from "@kiranshub/dashboard-ui";
       </particle-card>
     </div>
 
-    <particle-grid [gap]="'sm'" [cols]="2">
+    <particle-grid [gap]="'sm'" [cols]="{ mobile: 1, tablet: 2, desktop: 4 }">
       <particle-card>Item 1</particle-card>
       <particle-card>Item 2</particle-card>
       <particle-card>Item 3</particle-card>

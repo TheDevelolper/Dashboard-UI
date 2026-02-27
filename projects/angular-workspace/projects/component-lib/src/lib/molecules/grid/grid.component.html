@@ -1,7 +1,9 @@
 <div
   class="grid"
   [ngClass]="'gap-' + gap()"
-  [style.grid-template-columns]="'repeat(' + cols() + ', 1fr)'"
+  [style.--grid-cols-mobile]="responsiveCols().mobile"
+  [style.--grid-cols-tablet]="responsiveCols().tablet"
+  [style.--grid-cols-desktop]="responsiveCols().desktop"
 >
   <ng-content></ng-content>
 </div>

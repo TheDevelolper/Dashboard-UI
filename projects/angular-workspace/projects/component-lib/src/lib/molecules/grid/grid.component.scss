@@ -4,6 +4,18 @@
 
 .grid {
   display: grid;
+  grid-template-columns: repeat(var(--grid-cols-mobile, 1), 1fr);
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(var(--grid-cols-tablet, var(--grid-cols-mobile, 1)), 1fr);
+  }
+
+  @media (min-width: 1024px) {
+    grid-template-columns: repeat(
+      var(--grid-cols-desktop, var(--grid-cols-tablet, var(--grid-cols-mobile, 1))),
+      1fr
+    );
+  }
 }
 
 .gap-xs {
