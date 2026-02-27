@@ -1,4 +1,4 @@
-import { Component, input, signal } from '@angular/core';
+import { Component, input, signal, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SidebarComponent } from '../organisms/sidebar.component';
 import { SidebarNavComponent } from '../molecules/sidebar-nav/sidebar-nav.component';
@@ -20,7 +20,17 @@ export class DashboardComponent {
   readonly userInitials = input<string>('');
 
   protected readonly sidebarCollapsed = signal(false);
+  protected readonly isMobile = signal(false);
   protected readonly isDark = themeSignal;
+
+  constructor() {
+    this.checkScreenSize();
+  }
+
+  @HostListener('window:resize')
+  protected readonly checkScreenSize = () => {
+    this.isMobile.set(window.innerWidth < 768);
+  };
 
   protected readonly toggleSidebar = () => {
     this.sidebarCollapsed.update((v) => !v);

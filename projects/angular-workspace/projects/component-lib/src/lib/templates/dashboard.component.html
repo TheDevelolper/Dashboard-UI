@@ -1,9 +1,11 @@
 <div class="dashboard" [class.collapsed]="sidebarCollapsed()">
-  <particle-sidebar [appTitle]="appTitle()" [collapsed]="sidebarCollapsed()">
-    <particle-sidebar-nav [items]="navItems()" [collapsed]="sidebarCollapsed()" />
-  </particle-sidebar>
+  @if (!isMobile()) {
+    <particle-sidebar [appTitle]="appTitle()" [collapsed]="sidebarCollapsed()">
+      <particle-sidebar-nav [items]="navItems()" [collapsed]="sidebarCollapsed()" />
+    </particle-sidebar>
+  }
 
-  <div class="main-content">
+  <div class="main-content" [class.mobile]="isMobile()">
     <header class="header">
       <div class="header-left">
         <button class="menu-toggle" (click)="toggleSidebar()" aria-label="Toggle menu">
@@ -24,9 +26,6 @@
         </button>
         <div class="user-menu">
           <span class="user-initials">{{ userInitials() }}</span>
-          @if (userName()) {
-            <span class="user-name">{{ userName() }}</span>
-          }
         </div>
       </div>
     </header>

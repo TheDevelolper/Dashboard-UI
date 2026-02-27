@@ -14,8 +14,14 @@
   transition: margin-left var(--transition-normal);
 }
 
-.dashboard.collapsed .main-content {
-  margin-left: 4rem;
+.main-content.mobile {
+  margin-left: 0;
+}
+
+@media (min-width: 768px) {
+  .dashboard.collapsed .main-content {
+    margin-left: 4rem;
+  }
 }
 
 .header {
