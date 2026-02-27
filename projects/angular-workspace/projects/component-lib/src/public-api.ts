@@ -18,8 +18,8 @@ export type { GridGap, GridCols } from './lib/molecules/grid/grid.component';
 export { DashboardComponent } from './lib/templates/dashboard.component';
 
 export { SidebarComponent } from './lib/organisms/sidebar.component';
-export type { SidebarNavItem } from './lib/organisms/sidebar.component';
+export type { NavListItem } from './lib/organisms/sidebar.component';
 
-export { SidebarNavComponent } from './lib/molecules/sidebar-nav/sidebar-nav.component';
+export { NavListComponent } from './lib/molecules/nav-list/nav-list.component';
 
 export { initializeTheme, themeSignal, toggleTheme, setTheme } from './lib/services/theme.service';

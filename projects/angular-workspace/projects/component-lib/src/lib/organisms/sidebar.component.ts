@@ -2,7 +2,7 @@ import { Component, input, output } from '@angular/core';
 import type { IconName } from '../atoms/icons/icon.component';
 import { ParticleIcon } from '../atoms/icons/icon.component';
 
-export interface SidebarNavItem {
+export interface NavListItem {
   label: string;
   icon: IconName;
   route?: string;

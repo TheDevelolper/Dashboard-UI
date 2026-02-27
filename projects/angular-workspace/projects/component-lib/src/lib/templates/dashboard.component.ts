@@ -1,21 +1,21 @@
 import { Component, input, signal, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SidebarComponent } from '../organisms/sidebar.component';
-import { SidebarNavComponent } from '../molecules/sidebar-nav/sidebar-nav.component';
+import { NavListComponent } from '../molecules/nav-list/nav-list.component';
 import { ParticleIcon } from '../atoms/icons/icon.component';
-import type { SidebarNavItem } from '../organisms/sidebar.component';
+import type { NavListItem } from '../organisms/sidebar.component';
 import { themeSignal, toggleTheme } from '../services/theme.service';
 
 @Component({
   selector: 'particle-dashboard',
   standalone: true,
-  imports: [CommonModule, SidebarComponent, SidebarNavComponent, ParticleIcon],
+  imports: [CommonModule, SidebarComponent, NavListComponent, ParticleIcon],
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.scss',
 })
 export class DashboardComponent {
   readonly appTitle = input<string>('Dashboard');
-  readonly navItems = input<readonly SidebarNavItem[]>([]);
+  readonly navItems = input<readonly NavListItem[]>([]);
   readonly userInitials = input<string>('');
 
   protected readonly sidebarCollapsed = signal(false);

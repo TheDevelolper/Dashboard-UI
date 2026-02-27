@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/angular';
 import { DashboardComponent } from './dashboard.component';
-import type { SidebarNavItem } from '../organisms/sidebar.component';
+import type { NavListItem } from '../organisms/sidebar.component';
 import { moduleMetadata } from '@storybook/angular';
 import { RouterTestingModule } from '@angular/router/testing';
 
@@ -55,7 +55,7 @@ export default meta;
 
 type Story = StoryObj<DashboardComponent>;
 
-const navItems: readonly SidebarNavItem[] = [
+const navItems: readonly NavListItem[] = [
   { label: 'Home', icon: 'home', route: '/home' },
   { label: 'Analytics', icon: 'chart-bar', route: '/analytics' },
   { label: 'Users', icon: 'users', route: '/users' },

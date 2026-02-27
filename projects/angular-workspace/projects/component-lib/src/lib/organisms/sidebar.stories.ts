@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/angular';
 import { SidebarComponent } from './sidebar.component';
-import { SidebarNavComponent } from '../molecules/sidebar-nav/sidebar-nav.component';
-import type { SidebarNavItem } from './sidebar.component';
+import { NavListComponent } from '../molecules/nav-list/nav-list.component';
+import type { NavListItem } from './sidebar.component';
 import { moduleMetadata } from '@storybook/angular';
 import { RouterTestingModule } from '@angular/router/testing';
 
@@ -11,7 +11,7 @@ const meta: Meta<SidebarComponent> = {
   tags: ['autodocs'],
   decorators: [
     moduleMetadata({
-      imports: [SidebarNavComponent, RouterTestingModule],
+      imports: [NavListComponent, RouterTestingModule],
     }),
   ],
   argTypes: {
@@ -26,7 +26,7 @@ const meta: Meta<SidebarComponent> = {
 
 \`\`\`html
 <particle-sidebar [appTitle]="'My App'">
-  <particle-sidebar-nav [items]="navItems" />
+  <particle-nav-list [items]="navItems" />
 </particle-sidebar>
 \`\`\`
 
@@ -48,7 +48,7 @@ export default meta;
 
 type Story = StoryObj<SidebarComponent>;
 
-const navItems: readonly SidebarNavItem[] = [
+const navItems: readonly NavListItem[] = [
   { label: 'Home', icon: 'home', route: '/home' },
   { label: 'Analytics', icon: 'chart-bar', route: '/analytics' },
   { label: 'Users', icon: 'users', route: '/users' },
@@ -59,7 +59,7 @@ export const Default: Story = {
   render: () => ({
     template: `
       <particle-sidebar [appTitle]="'My Dashboard'">
-        <particle-sidebar-nav [items]="navItems" />
+        <particle-nav-list [items]="navItems" />
       </particle-sidebar>
     `,
     props: {
@@ -82,7 +82,7 @@ export const LongNavItems: Story = {
   render: () => ({
     template: `
       <particle-sidebar [appTitle]="'Admin Panel'">
-        <particle-sidebar-nav [items]="longNavItems" />
+        <particle-nav-list [items]="longNavItems" />
       </particle-sidebar>
     `,
     props: {
@@ -91,7 +91,7 @@ export const LongNavItems: Story = {
   }),
 };
 
-const longNavItems: readonly SidebarNavItem[] = [
+const longNavItems: readonly NavListItem[] = [
   { label: 'Dashboard', icon: 'home', route: '/dashboard' },
   { label: 'Analytics', icon: 'chart-bar', route: '/analytics' },
   { label: 'Customers', icon: 'users', route: '/customers' },

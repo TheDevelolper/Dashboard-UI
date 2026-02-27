@@ -6,7 +6,7 @@
       [isMobile]="false"
       (toggle)="toggleSidebar()"
     >
-      <particle-sidebar-nav [items]="navItems()" [collapsed]="sidebarCollapsed()" />
+      <particle-nav-list [items]="navItems()" [collapsed]="sidebarCollapsed()" />
     </particle-sidebar>
   }
 
@@ -19,7 +19,7 @@
           [isMobile]="true"
           (toggle)="closeMobileSidebar()"
         >
-          <particle-sidebar-nav [items]="navItems()" [collapsed]="false" />
+          <particle-nav-list [items]="navItems()" [collapsed]="false" />
         </particle-sidebar>
       </div>
     </div>

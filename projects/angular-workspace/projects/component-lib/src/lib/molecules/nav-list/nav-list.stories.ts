@@ -1,12 +1,12 @@
 import type { Meta, StoryObj } from '@storybook/angular';
-import { SidebarNavComponent } from './sidebar-nav.component';
-import type { SidebarNavItem } from '../../organisms/sidebar.component';
+import { NavListComponent } from './nav-list.component';
+import type { NavListItem } from '../../organisms/sidebar.component';
 import { RouterTestingModule } from '@angular/router/testing';
 import { moduleMetadata } from '@storybook/angular';
 
-const meta: Meta<SidebarNavComponent> = {
-  title: 'Molecules/SidebarNav',
-  component: SidebarNavComponent,
+const meta: Meta<NavListComponent> = {
+  title: 'Molecules/NavList',
+  component: NavListComponent,
   tags: ['autodocs'],
   decorators: [
     moduleMetadata({
@@ -24,7 +24,7 @@ const meta: Meta<SidebarNavComponent> = {
 ## Usage
 
 \`\`\`html
-<particle-sidebar-nav 
+<particle-nav-list 
   [items]="navItems"
   [collapsed]="false" />
 \`\`\`
@@ -45,9 +45,9 @@ const navItems = [
 
 export default meta;
 
-type Story = StoryObj<SidebarNavComponent>;
+type Story = StoryObj<NavListComponent>;
 
-const navItems: readonly SidebarNavItem[] = [
+const navItems: readonly NavListItem[] = [
   { label: 'Home', icon: 'home', route: '/home' },
   { label: 'Analytics', icon: 'chart-bar', route: '/analytics' },
   { label: 'Users', icon: 'users', route: '/users' },
