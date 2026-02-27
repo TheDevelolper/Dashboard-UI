@@ -15,7 +15,6 @@ const meta: Meta<DashboardComponent> = {
   ],
   argTypes: {
     appTitle: { control: 'text' },
-    userName: { control: 'text' },
     userInitials: { control: 'text' },
   },
   parameters: {
@@ -29,7 +28,6 @@ const meta: Meta<DashboardComponent> = {
 <particle-dashboard 
   [appTitle]="'My Dashboard'" 
   [navItems]="navItems"
-  [userName]="'John Doe'"
   [userInitials]="'JD'">
   
   <!-- Your page content here -->
@@ -68,7 +66,6 @@ export const Default: Story = {
   args: {
     appTitle: 'My Dashboard',
     navItems,
-    userName: 'John Doe',
     userInitials: 'JD',
   },
 };
@@ -77,7 +74,6 @@ export const Minimal: Story = {
   args: {
     appTitle: 'Dashboard',
     navItems: [],
-    userName: '',
     userInitials: 'A',
   },
 };
@@ -96,7 +92,6 @@ export const LongNavItems: Story = {
       { label: 'Settings', icon: 'cog', route: '/settings' },
       { label: 'Help & Support', icon: 'information-circle', route: '/help' },
     ],
-    userName: 'Admin User',
     userInitials: 'AU',
   },
 };

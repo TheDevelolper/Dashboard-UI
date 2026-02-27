@@ -3,10 +3,26 @@
     <particle-sidebar
       [appTitle]="appTitle()"
       [collapsed]="sidebarCollapsed()"
+      [isMobile]="false"
       (toggle)="toggleSidebar()"
     >
       <particle-sidebar-nav [items]="navItems()" [collapsed]="sidebarCollapsed()" />
     </particle-sidebar>
+  }
+
+  @if (isMobile() && mobileSidebarOpen()) {
+    <div class="mobile-sidebar-overlay" (click)="closeMobileSidebar()">
+      <div class="mobile-sidebar" (click)="$event.stopPropagation()">
+        <particle-sidebar
+          [appTitle]="appTitle()"
+          [collapsed]="false"
+          [isMobile]="true"
+          (toggle)="closeMobileSidebar()"
+        >
+          <particle-sidebar-nav [items]="navItems()" [collapsed]="false" />
+        </particle-sidebar>
+      </div>
+    </div>
   }
 
   <div class="main-content" [class.mobile]="isMobile()">

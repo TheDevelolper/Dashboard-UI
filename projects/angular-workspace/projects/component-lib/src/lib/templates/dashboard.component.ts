@@ -16,24 +16,39 @@ import { themeSignal, toggleTheme } from '../services/theme.service';
 export class DashboardComponent {
   readonly appTitle = input<string>('Dashboard');
   readonly navItems = input<readonly SidebarNavItem[]>([]);
-  readonly userName = input<string>('');
   readonly userInitials = input<string>('');
 
   protected readonly sidebarCollapsed = signal(false);
   protected readonly isMobile = signal(false);
+  protected readonly mobileSidebarOpen = signal(false);
   protected readonly isDark = themeSignal;
 
   constructor() {
     this.checkScreenSize();
   }
 
+  private getBreakpoint(): number {
+    return parseInt(
+      getComputedStyle(document.documentElement).getPropertyValue('--breakpoint-mobile') || '768',
+      10,
+    );
+  }
+
   @HostListener('window:resize')
   protected readonly checkScreenSize = () => {
-    this.isMobile.set(window.innerWidth < 768);
+    this.isMobile.set(window.innerWidth < this.getBreakpoint());
   };
 
   protected readonly toggleSidebar = () => {
-    this.sidebarCollapsed.update((v) => !v);
+    if (this.isMobile()) {
+      this.mobileSidebarOpen.update((v) => !v);
+    } else {
+      this.sidebarCollapsed.update((v) => !v);
+    }
+  };
+
+  protected readonly closeMobileSidebar = () => {
+    this.mobileSidebarOpen.set(false);
   };
 
   protected readonly toggleTheme = () => toggleTheme();

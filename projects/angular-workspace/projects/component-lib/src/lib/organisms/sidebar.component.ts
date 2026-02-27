@@ -18,5 +18,6 @@ export interface SidebarNavItem {
 export class SidebarComponent {
   readonly appTitle = input<string>('');
   readonly collapsed = input<boolean>(false);
+  readonly isMobile = input<boolean>(false);
   readonly toggle = output<void>();
 }
