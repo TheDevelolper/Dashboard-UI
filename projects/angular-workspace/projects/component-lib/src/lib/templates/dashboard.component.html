@@ -1,6 +1,10 @@
 <div class="dashboard" [class.collapsed]="sidebarCollapsed()">
   @if (!isMobile()) {
-    <particle-sidebar [appTitle]="appTitle()" [collapsed]="sidebarCollapsed()">
+    <particle-sidebar
+      [appTitle]="appTitle()"
+      [collapsed]="sidebarCollapsed()"
+      (toggle)="toggleSidebar()"
+    >
       <particle-sidebar-nav [items]="navItems()" [collapsed]="sidebarCollapsed()" />
     </particle-sidebar>
   }
@@ -8,9 +12,11 @@
   <div class="main-content" [class.mobile]="isMobile()">
     <header class="header">
       <div class="header-left">
-        <button class="menu-toggle" (click)="toggleSidebar()" aria-label="Toggle menu">
-          <particle-icon name="menu" size="medium" />
-        </button>
+        @if (isMobile()) {
+          <button class="menu-toggle" (click)="toggleSidebar()" aria-label="Toggle menu">
+            <particle-icon name="menu" size="medium" />
+          </button>
+        }
       </div>
       <div class="header-right">
         <button

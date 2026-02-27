@@ -1,5 +1,8 @@
 <aside class="sidebar" [class.collapsed]="collapsed()">
   <div class="sidebar-header">
+    <button class="sidebar-toggle" (click)="toggle.emit()" aria-label="Toggle sidebar">
+      <particle-icon [name]="collapsed() ? 'chevron-right' : 'chevron-left'" size="medium" />
+    </button>
     @if (appTitle() && !collapsed()) {
       <h1 class="app-title">{{ appTitle() }}</h1>
     }
