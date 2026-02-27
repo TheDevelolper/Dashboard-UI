@@ -1,6 +1,9 @@
-@use 'tailwindcss';
-@use './reset.scss';
-@use './theme.scss';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import './reset.scss';
+@import './theme.scss';
 
 body {
   font-family: var(--font-family);

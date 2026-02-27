@@ -1,4 +1,6 @@
-@use 'tailwindcss';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 .btn {
   @apply border-none font-medium transition-all duration-200 cursor-pointer;
