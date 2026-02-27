@@ -1,64 +1,102 @@
-# ComponentLib
+# particle-ui
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.0.
+Angular UI component library featuring a dashboard layout with sidebar navigation, buttons, icons, and more.
 
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## Installation
 
 ```bash
-ng generate component component-name
+npm install particle-ui
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## Components
 
-```bash
-ng generate --help
+### Dashboard
+
+A full dashboard layout with collapsible sidebar, theme toggle, and user dropdown menu.
+
+```typescript
+import { DashboardComponent, type NavListItem } from 'particle-ui';
+
+@Component({
+  imports: [DashboardComponent],
+  ...
+})
+export class AppComponent {
+  readonly navItems: readonly NavListItem[] = [
+    { label: 'Home', icon: 'home', route: '/home' },
+    { label: 'Analytics', icon: 'chart-bar', route: '/analytics' },
+    { label: 'Settings', icon: 'cog', route: '/settings' },
+  ];
+}
 ```
 
-## Building
-
-To build the library, run:
-
-```bash
-ng build component-lib
+```html
+<particle-dashboard [appTitle]="'My App'" [navItems]="navItems" [userInitials]="'JD'">
+  <!-- Your content here -->
+  <h1>Welcome</h1>
+</particle-dashboard>
 ```
 
-This command will compile your project, and the build artifacts will be placed in the `dist/` directory.
+### Inputs
 
-### Publishing the Library
+| Input           | Type                     | Default       | Description                |
+| --------------- | ------------------------ | ------------- | -------------------------- |
+| `appTitle`      | `string`                 | `'Dashboard'` | Title displayed in sidebar |
+| `navItems`      | `readonly NavListItem[]` | `[]`          | Navigation items           |
+| `userInitials`  | `string`                 | `''`          | User initials to display   |
+| `userMenuItems` | `readonly NavListItem[]` | Default menu  | Dropdown menu items        |
 
-Once the project is built, you can publish your library by following these steps:
+### NavListItem
 
-1. Navigate to the `dist` directory:
-
-   ```bash
-   cd dist/component-lib
-   ```
-
-2. Run the `npm publish` command to publish your library to the npm registry:
-   ```bash
-   npm publish
-   ```
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
+```typescript
+interface NavListItem {
+  label: string;
+  icon: IconName;
+  route?: string;
+}
 ```
 
-## Running end-to-end tests
+### Icon Names
 
-For end-to-end (e2e) testing, run:
+Available icons: `menu`, `chevron-left`, `chevron-right`, `xmark`, `home`, `chart-bar`, `users`, `cog`, `sun`, `moon`, `bell`, `folder`, `shopping-cart`, `mail`, `information-circle`, `user`, `logout`
 
-```bash
-ng e2e
+## Button
+
+```typescript
+import { ParticleButton, type ButtonVariant, type ButtonSize } from 'particle-ui';
+
+@Component({
+  imports: [ParticleButton],
+  ...
+})
+export class AppComponent {
+  readonly variant: ButtonVariant = 'primary';
+  readonly size: ButtonSize = 'medium';
+}
 ```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+```html
+<particle-button [variant]="variant" [size]="size"> Click me </particle-button>
+```
 
-## Additional Resources
+## Icon
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+```typescript
+import { ParticleIcon, type IconName } from 'particle-ui';
+
+@Component({
+  imports: [ParticleIcon],
+  ...
+})
+export class AppComponent {
+  readonly icon: IconName = 'home';
+}
+```
+
+```html
+<particle-icon [name]="icon" size="medium" />
+```
+
+## License
+
+MIT
