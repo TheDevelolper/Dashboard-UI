@@ -9,7 +9,9 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "storybook": "ng run angular-workspace:storybook",
-    "build-storybook": "ng run angular-workspace:build-storybook"
+    "build-storybook": "ng run angular-workspace:build-storybook",
+    "build:lib": "ng build component-lib",
+    "publish:lib": "npm run build:lib && cd dist/component-lib && npm publish --access public"
   },
   "private": true,
   "packageManager": "pnpm@10.28.2",
