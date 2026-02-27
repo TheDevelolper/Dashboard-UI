@@ -9,7 +9,7 @@ export type GridCols = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12;
   standalone: true,
   imports: [CommonModule],
   templateUrl: './grid.component.html',
-  styleUrl: './grid.component.css',
+  styleUrl: './grid.component.scss',
 })
 export class GridComponent {
   readonly gap = input<GridGap>('md');

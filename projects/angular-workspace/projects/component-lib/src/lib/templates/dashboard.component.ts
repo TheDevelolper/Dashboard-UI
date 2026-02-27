@@ -11,7 +11,7 @@ import { themeSignal, toggleTheme } from '../services/theme.service';
   standalone: true,
   imports: [CommonModule, SidebarComponent, SidebarNavComponent, ParticleIcon],
   templateUrl: './dashboard.component.html',
-  styleUrl: './dashboard.component.css',
+  styleUrl: './dashboard.component.scss',
 })
 export class DashboardComponent {
   readonly appTitle = input<string>('Dashboard');

@@ -10,7 +10,7 @@ import type { SidebarNavItem } from '../../organisms/sidebar.component';
   standalone: true,
   imports: [CommonModule, RouterLink, RouterLinkActive, ParticleIcon],
   templateUrl: './sidebar-nav.component.html',
-  styleUrl: './sidebar-nav.component.css',
+  styleUrl: './sidebar-nav.component.scss',
 })
 export class SidebarNavComponent {
   readonly items = input<readonly SidebarNavItem[]>([]);

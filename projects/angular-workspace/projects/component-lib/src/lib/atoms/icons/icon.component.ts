@@ -10,7 +10,7 @@ export type IconSize = 'small' | 'medium' | 'large';
   selector: 'particle-icon',
   imports: [CommonModule],
   templateUrl: './icon.component.html',
-  styleUrl: './icon.component.css',
+  styleUrl: './icon.component.scss',
 })
 export class ParticleIcon {
   readonly name = input.required<IconName>();

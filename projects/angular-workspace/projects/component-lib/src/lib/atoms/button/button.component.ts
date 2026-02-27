@@ -9,7 +9,7 @@ export type ButtonType = 'button' | 'submit' | 'reset';
   selector: 'particle-button',
   imports: [CommonModule],
   templateUrl: './button.component.html',
-  styleUrl: './button.component.css',
+  styleUrl: './button.component.scss',
 })
 export class ParticleButton {
   readonly variant = input<ButtonVariant>('primary');
