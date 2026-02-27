@@ -43,11 +43,11 @@
   margin-left: 0;
 }
 
-@media (min-width: var(--breakpoint-mobile)) {
-  .dashboard.collapsed .main-content {
+
+  .dashboard.collapsed .main-content:not(.mobile) {
     margin-left: 4rem;
   }
-}
+
 
 .header {
   height: var(--header-height);
