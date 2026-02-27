@@ -23,6 +23,10 @@
   align-items: center;
   gap: var(--spacing-sm);
   flex-shrink: 0;
+
+  .app-title { 
+    text-wrap: nowrap;
+  }
 }
 
 .sidebar-toggle {
