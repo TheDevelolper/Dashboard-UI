@@ -42,7 +42,7 @@ export default meta;
 type Story = StoryObj<GridComponent>;
 
 const cardTemplate = (n: number) => `
-  <particle-card style="padding: 1rem; text-align: center;">Card ${n}</particle-card>
+  <particle-card style=" text-align: center;">Card ${n}</particle-card>
 `;
 
 export const Default: Story = {
@@ -53,7 +53,7 @@ export const Default: Story = {
   render: (args) => ({
     template: `
       <particle-grid [gap]="gap" [cols]="cols">
-        ${cardTemplate(1)}${cardTemplate(2)}${cardTemplate(3)}${cardTemplate(4)}
+        ${[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].map((n) => cardTemplate(n)).join('')}
       </particle-grid>
     `,
     props: args,

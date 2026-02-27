@@ -18,10 +18,10 @@ import { CardComponent, GridComponent } from "@kiranshub/dashboard-ui";
       <particle-card>Item 3</particle-card>
       <particle-card>Item 4</particle-card>
 
-      <particle-card>Item 1</particle-card>
-      <particle-card>Item 2</particle-card>
-      <particle-card>Item 3</particle-card>
-      <particle-card>Item 4</particle-card>
+      <particle-card>Item 5</particle-card>
+      <particle-card>Item 6</particle-card>
+      <particle-card>Item 7</particle-card>
+      <particle-card>Item 8</particle-card>
     </particle-grid>
   `,
   imports: [CardComponent, GridComponent],

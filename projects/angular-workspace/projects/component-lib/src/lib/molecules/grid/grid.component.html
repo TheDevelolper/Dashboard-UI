@@ -1,3 +1,7 @@
-<div class="grid" [class]="'gap-' + gap()">
+<div
+  class="grid"
+  [ngClass]="'gap-' + gap()"
+  [style.grid-template-columns]="'repeat(' + cols() + ', 1fr)'"
+>
   <ng-content></ng-content>
 </div>

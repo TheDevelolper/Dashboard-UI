@@ -47,8 +47,8 @@ Include the theme styles and override as you see fit for your app
   --grid-gap-xs: 0.25rem;
   --grid-gap-sm: 0.5rem;
   --grid-gap-md: 1rem;
-  --grid-gap-lg: 1.5rem;
-  --grid-gap-xl: 2rem;
+  --grid-gap-lg: 2rem;
+  --grid-gap-xl: 4rem;
 
   /* ===========================================
      Layout
