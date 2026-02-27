@@ -1,11 +1,11 @@
-# particle-ui
+# @kiranshub/dashboard-ui
 
 Angular UI component library featuring a dashboard layout with sidebar navigation, buttons, icons, and more.
 
 ## Installation
 
 ```bash
-npm install particle-ui
+npm install @kiranshub/dashboard-ui
 ```
 
 ## Components
@@ -15,7 +15,7 @@ npm install particle-ui
 A full dashboard layout with collapsible sidebar, theme toggle, and user dropdown menu.
 
 ```typescript
-import { DashboardComponent, type NavListItem } from 'particle-ui';
+import { DashboardComponent, type NavListItem } from '@kiranshub/dashboard-ui';
 
 @Component({
   imports: [DashboardComponent],
@@ -63,7 +63,7 @@ Available icons: `menu`, `chevron-left`, `chevron-right`, `xmark`, `home`, `char
 ## Button
 
 ```typescript
-import { ParticleButton, type ButtonVariant, type ButtonSize } from 'particle-ui';
+import { ParticleButton, type ButtonVariant, type ButtonSize } from '@kiranshub/dashboard-ui';
 
 @Component({
   imports: [ParticleButton],
@@ -82,7 +82,7 @@ export class AppComponent {
 ## Icon
 
 ```typescript
-import { ParticleIcon, type IconName } from 'particle-ui';
+import { ParticleIcon, type IconName } from '@kiranshub/dashboard-ui';
 
 @Component({
   imports: [ParticleIcon],
