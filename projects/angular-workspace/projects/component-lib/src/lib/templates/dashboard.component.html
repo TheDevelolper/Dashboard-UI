@@ -46,8 +46,13 @@
             <particle-icon name="moon" size="medium" />
           }
         </button>
-        <div class="user-menu">
+        <div class="user-menu" (click)="toggleUserMenu()">
           <span class="user-initials">{{ userInitials() }}</span>
+          @if (userMenuOpen()) {
+            <div class="user-dropdown" (click)="$event.stopPropagation()">
+              <particle-nav-list [items]="userMenuItems()" [collapsed]="false" />
+            </div>
+          }
         </div>
       </div>
     </header>

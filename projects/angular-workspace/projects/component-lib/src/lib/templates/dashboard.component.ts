@@ -17,11 +17,17 @@ export class DashboardComponent {
   readonly appTitle = input<string>('Dashboard');
   readonly navItems = input<readonly NavListItem[]>([]);
   readonly userInitials = input<string>('');
+  readonly userMenuItems = input<readonly NavListItem[]>([
+    { label: 'Manage Account', icon: 'user', route: '/account' },
+    { label: 'Settings', icon: 'cog', route: '/settings' },
+    { label: 'Log Out', icon: 'logout', route: '/logout' },
+  ]);
 
   protected readonly sidebarCollapsed = signal(false);
   protected readonly isMobile = signal(false);
   protected readonly mobileSidebarOpen = signal(false);
   protected readonly isDark = themeSignal;
+  protected readonly userMenuOpen = signal(false);
 
   constructor() {
     this.checkScreenSize();
@@ -52,4 +58,12 @@ export class DashboardComponent {
   };
 
   protected readonly toggleTheme = () => toggleTheme();
+
+  protected readonly toggleUserMenu = () => {
+    this.userMenuOpen.update((v) => !v);
+  };
+
+  protected readonly closeUserMenu = () => {
+    this.userMenuOpen.set(false);
+  };
 }
