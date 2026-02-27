@@ -1,6 +1,7 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { DashboardComponent } from '../../projects/component-lib/src/lib/templates/dashboard.component';
+import { DashboardComponent } from '@kiranshub/dashboard-ui';
+
 
 @Component({
   selector: 'app-root',
