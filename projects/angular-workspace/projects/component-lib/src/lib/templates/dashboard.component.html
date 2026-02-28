@@ -46,7 +46,7 @@
             <particle-icon name="moon" size="medium" />
           }
         </button>
-        <div class="user-menu" (click)="toggleUserMenu()">
+        <div #userMenu class="user-menu" (click)="toggleUserMenu()">
           <span class="user-initials">{{ userInitials() }}</span>
           @if (userMenuOpen()) {
             <div class="user-dropdown" (click)="$event.stopPropagation()">

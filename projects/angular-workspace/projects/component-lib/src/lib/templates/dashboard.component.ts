@@ -1,4 +1,4 @@
-import { Component, input, signal, HostListener } from '@angular/core';
+import { Component, input, signal, HostListener, ViewChild, ElementRef } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SidebarComponent } from '../organisms/sidebar.component';
 import { NavListComponent } from '../molecules/nav-list/nav-list.component';
@@ -29,6 +29,8 @@ export class DashboardComponent {
   protected readonly isDark = themeSignal;
   protected readonly userMenuOpen = signal(false);
 
+  @ViewChild('userMenu') private readonly userMenu?: ElementRef<HTMLDivElement>;
+
   constructor() {
     this.checkScreenSize();
   }
@@ -43,6 +45,17 @@ export class DashboardComponent {
   @HostListener('window:resize')
   protected readonly checkScreenSize = () => {
     this.isMobile.set(window.innerWidth < this.getBreakpoint());
+  };
+
+  @HostListener('document:click', ['$event'])
+  protected readonly onDocumentClick = (event: MouseEvent) => {
+    if (
+      this.userMenuOpen() &&
+      this.userMenu &&
+      !this.userMenu.nativeElement.contains(event.target as Node)
+    ) {
+      this.userMenuOpen.set(false);
+    }
   };
 
   protected readonly toggleSidebar = () => {
