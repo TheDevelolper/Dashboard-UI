@@ -94,12 +94,14 @@
   --color-bg-card: #ffffff;
 
   /* ===========================================
-     Colors - Sidebar
-     =========================================== */
+      Colors - Sidebar
+      =========================================== */
   --color-sidebar-text: #333333;
   --color-sidebar-text-hover: #181818;
   --color-sidebar-hover: rgba(255, 255, 255, 0.3);
   --color-sidebar-border: #e5e5e5;
+  --color-sidebar-header: #ffffff;
+  --color-sidebar-footer: #ffffff;
 
   /* ===========================================
      Colors - Text
@@ -144,4 +146,6 @@
   --color-sidebar-text-hover: #ffc5e0;
   --color-sidebar-hover: rgba(253, 181, 206, 0.15);
   --color-sidebar-border: #2a2a2a;
+  --color-sidebar-header: #1e1e1e;
+  --color-sidebar-footer: #1e1e1e;
 }
