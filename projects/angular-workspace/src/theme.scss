@@ -89,19 +89,22 @@
      Colors - Background
      =========================================== */
   --color-bg: #fff1f6;
-  --color-bg-sidebar: #ffffff;
-  --color-bg-sidebar-nav: #fce2eb;
   --color-bg-card: #ffffff;
 
   /* ===========================================
       Colors - Sidebar
       =========================================== */
+
+   --color-bg-sidebar: #ffffff;
+   --color-sidebar-header: #ffffff;
+   --color-bg-sidebar-nav: #fce2eb;
+   --color-sidebar-footer: #fce2eb;
+
   --color-sidebar-text: #333333;
   --color-sidebar-text-hover: #181818;
   --color-sidebar-hover: rgba(255, 255, 255, 0.3);
   --color-sidebar-border: #e5e5e5;
-  --color-sidebar-header: #ffffff;
-  --color-sidebar-footer: #ffffff;
+
 
   /* ===========================================
      Colors - Text
