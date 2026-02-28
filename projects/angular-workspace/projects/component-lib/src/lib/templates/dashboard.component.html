@@ -41,9 +41,9 @@
           [attr.aria-label]="isDark() ? 'Switch to light mode' : 'Switch to dark mode'"
         >
           @if (isDark()) {
-            <particle-icon name="sun" size="medium" />
+            <particle-icon class="icon-lightmode" name="sun" size="medium" />
           } @else {
-            <particle-icon name="moon" size="medium" />
+            <particle-icon class="icon-darkmode" name="moon" size="medium" />
           }
         </button>
         <div #userMenu class="user-menu" (click)="toggleUserMenu()">

@@ -88,9 +88,11 @@
   /* ===========================================
      Colors - Background
      =========================================== */
-  --color-bg: #fff1f6;
-  --color-bg-card: #ffffff;
+  --color-bg: #ffffff;
+  --color-bg-card: #fff1f6;
 
+  --color-bg-header: #ffffff;
+  --color-bg-footer: #ffffff;
   /* ===========================================
       Colors - Sidebar
       =========================================== */
@@ -140,6 +142,10 @@
 
   --color-bg: #121212;
   --color-bg-card: #1e1e1e;
+
+  --color-bg-header: #1e1e1e;
+  --color-bg-footer: #1e1e1e;
+  
   --color-bg-sidebar: #1e1e1e;
   --color-bg-sidebar-nav: #161616;
   --color-text: #fdb5ce;
@@ -149,6 +155,4 @@
   --color-sidebar-text-hover: #ffc5e0;
   --color-sidebar-hover: rgba(253, 181, 206, 0.15);
   --color-sidebar-border: #2a2a2a;
-  --color-sidebar-header: #1e1e1e;
-  --color-sidebar-footer: #1e1e1e;
 }
