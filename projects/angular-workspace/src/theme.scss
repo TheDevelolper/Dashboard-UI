@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap');
 
 :root {
   /* ===========================================
      Typography
      =========================================== */
   --font-family:
-    'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    'DM Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 
   /* Font sizes */
   --font-size-xs: 0.75rem;
@@ -90,15 +90,15 @@
      =========================================== */
   --color-bg: #fff1f6;
   --color-bg-sidebar: #ffffff;
-  --color-bg-sidebar-nav: #ffffff;
+  --color-bg-sidebar-nav: #fce2eb;
   --color-bg-card: #ffffff;
 
   /* ===========================================
      Colors - Sidebar
      =========================================== */
   --color-sidebar-text: #333333;
-  --color-sidebar-text-hover: #555555;
-  --color-sidebar-hover: rgba(0, 0, 0, 0.05);
+  --color-sidebar-text-hover: #181818;
+  --color-sidebar-hover: rgba(255, 255, 255, 0.3);
   --color-sidebar-border: #e5e5e5;
 
   /* ===========================================
@@ -123,25 +123,25 @@
 [data-theme='dark'] {
   /* Primary, Secondary, Outline */
   --color-primary: #fdb5ce;
-  --color-primary-hover: #f5a3c0;
-  --color-primary-foreground: #333333;
-  --color-btn-text: #333333;
-  --color-secondary: #333333;
-  --color-secondary-hover: #4a4a4a;
-  --color-secondary-foreground: #ffffff;
-  --color-btn-secondary-text: #ffffff;
+  --color-primary-hover: #ffc5e0;
+  --color-primary-foreground: #1a0a10;
+  --color-btn-text: #1a0a10;
+  --color-secondary: #e5e5e5;
+  --color-secondary-hover: #ffffff;
+  --color-secondary-foreground: #1a1a1a;
+  --color-btn-secondary-text: #1a1a1a;
   --color-outline: #fdb5ce;
-  --color-outline-foreground: #333333;
+  --color-outline-foreground: #1a0a10;
 
-  --color-bg: #1a1a1a;
-  --color-bg-card: #252525;
-  --color-bg-sidebar: #141414;
-  --color-bg-sidebar-nav: #141414;
+  --color-bg: #121212;
+  --color-bg-card: #1e1e1e;
+  --color-bg-sidebar: #1e1e1e;
+  --color-bg-sidebar-nav: #161616;
   --color-text: #fdb5ce;
   --color-text-muted: #b08fa0;
-  --color-border: #3a3a3a;
+  --color-border: #333333;
   --color-sidebar-text: #fdb5ce;
   --color-sidebar-text-hover: #ffc5e0;
-  --color-sidebar-hover: rgba(255, 255, 255, 0.08);
+  --color-sidebar-hover: rgba(253, 181, 206, 0.15);
   --color-sidebar-border: #2a2a2a;
 }
