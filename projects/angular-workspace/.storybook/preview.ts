@@ -1,4 +1,6 @@
+
 import type { Preview } from '@storybook/angular';
+import { initializeTheme } from '../projects/component-lib/src/lib/services/theme.service';
 
 const order = ['Atoms', 'Organisms', 'Molecules', 'Templates'];
 
@@ -30,3 +32,5 @@ const preview: Preview = {
 };
 
 export default preview;
+initializeTheme();
+
